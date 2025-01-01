@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import "./style.css";
+import "./Style.css";
 import Todo from './components/Todo'
 
 function App() {
