@@ -1,6 +1,4 @@
-Here's a possible description for your project to post on GitHub:
 
----
 
 ## Todo App with Local Storage
 
@@ -51,6 +49,3 @@ A lightweight, easy-to-use Todo app that helps you stay organized and productive
 
 Feel free to fork the repository and make improvements! Contributions are always welcome. 😊
 
----
-
-Let me know if you'd like to customize it further!
