@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+  *{
+    @apply p-0 m-0;
+    box-sizing: border-box;
+  }
+
+  body{
+    @apply bg-[#f5f9eb] h-[100vh] flex justify-center items-center  ;
+  }
+
+  input{
+    @apply p-[15px] border-none outline-none bg-[#f5f9eb] w-[280px] rounded-sm md:w-[320px];
+  }
+
+  button{
+    @apply rounded-[100px] bg-[#454545] p-[5px] text-[#fff] cursor-pointer px-[20px] py-[10px]  text-center ;
+  }
+}
+
+@layer components{
+  .container{
+    @apply bg-[#fcfff3] flex items-center py-[50px] w-[320px] rounded-lg flex-col md:flex-col md:w-[400px] justify-center ;
+    box-shadow: 0 5px 10px hsla(0, 0%, 0%, 0.2);
+  }
+
+  .todos-list{
+    @apply mt-[3rem] ;
+  }
+
+  .todo{
+    @apply list-none flex justify-between items-center bg-[#f5f9eb] py-[7px] px-[20px] m-[10px] w-[300px] font-sans;
+    
+  }
+
+  .close{
+    @apply py-[5px] px-[10px] cursor-pointer;
+  }
+}
