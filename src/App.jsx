@@ -3,11 +3,16 @@ import React, { useState } from 'react'
 import { nanoid } from 'nanoid';
 
 const App = () => {
-  const [todos, setTodos] = useState([]);
 
+  const [todos, setTodos] = useState(() => {
+    const savedTodos = localStorage.getItem('todos');
+    return savedTodos ? JSON.parse(savedTodos) : [];
+  });
+
+  
   const [input, setInput] = useState("")
 
-  let i = 0;
+  
 
   const handleSubmit = () => {
     if(input.trim() === ""){
@@ -15,11 +20,16 @@ const App = () => {
       return
     }
 
-    setTodos(todos => {
-      return todos.concat({
-        text : input,
-        id : nanoid(),
-      })
+    const newTodo = {
+      text : input,
+      id : nanoid(),
+    }
+
+    setTodos((prevTodos) => {
+      const updatedTodos = [...prevTodos, newTodo];
+
+      localStorage.setItem('todos', JSON.stringify(updatedTodos));
+      return updatedTodos;
     })
     
     setInput("")
@@ -32,9 +42,14 @@ const App = () => {
     }
   }
 
-  const removeTodos = (id) => setTodos(
-    todos.filter(t => t.id !== id)
-  )
+  const removeTodos = (id) => {
+    setTodos((prevTodos) => {
+      const updatedTodos = prevTodos.filter((t) => t.id !== id);
+
+      localStorage.setItem('todos', JSON.stringify(updatedTodos))
+      return updatedTodos
+    })
+  }
 
 
 
