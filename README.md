@@ -25,11 +25,11 @@ This is a simple and responsive **React-based Todo App** that allows users to cr
 ### Setup Instructions:
 1. Clone the repository:
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/iamaswinth/React-Todo
    ```
 2. Navigate to the project folder:
    ```bash
-   cd <project-folder>
+   cd React-Todo
    ```
 3. Install dependencies:
    ```bash
